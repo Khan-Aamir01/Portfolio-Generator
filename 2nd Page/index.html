@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Generator</title>
+    <link rel="stylesheet" href="C:\Users\aamir\OneDrive\Desktop\Aamir\Portfolio-Generator\1st Page\style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <ul class="sideBar">
+                <li onclick="hideSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24"
+                            viewBox="0 -960 960 960" width="24">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+
+            <ul class="topBar">
+                <li><a href="#">Portfolio-Generator</a></li>
+                <li class="hideOnMobile"><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="#">About</a></li>
+                <li class="hideOnMobile"><a href="#">Contact</a></li>
+                <li class="hideOnMobile"><a href="#">Login</a></li>
+                <li class="menu-button" onclick=showSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="24" viewBox="0 -960 960 960" width="24">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
+
+        </div>
+        <div class="imgSection">
+            <img class="portfolioImage"src="C:\Users\aamir\OneDrive\Desktop\Aamir\Portfolio\Portfolio1.jpeg">
+        </div>
+        <div class="allbtn">
+            <button class="buttons"> Prev </button>
+            <button class="buttons"> 1 </button>
+            <button class="buttons"> 2 </button>
+            <button class="buttons"> 3 </button>
+            <button class="buttons"> Next </button>
+        </div>
+    </div>
+    <script>
+        function showSideBar() {
+            const x = document.querySelector('.sideBar');
+            x.style.display = 'flex';
+        }
+        function hideSideBar() {
+            const x = document.querySelector('.sideBar');
+            x.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

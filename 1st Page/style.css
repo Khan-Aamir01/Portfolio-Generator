@@ -6,6 +6,10 @@ body{
     min-height: 100vh;
     background-color: gray;
 }
+a {
+    text-decoration: none;
+    color:inherit;
+}
 
 .topBar{
     width:100%;
@@ -124,13 +128,15 @@ body{
 }
 .portfolioImage{
     width: 50%;
+    
 }
+
 .allbtn{
     text-align: center;
     margin: 3%;
 }
 .buttons {
-    background-color: white; /* Green */
+    background-color: white;
     color: black;
     padding: 15px 32px;
     text-align: center;
@@ -143,3 +149,12 @@ body{
     background-color: black;
     color:white;
   }
+  @media(max-width:800px) {
+    .portfolioImage {
+        width: 90vw;
+        height: 70vh;
+    }
+    .buttons {
+        padding: 10px 16px;
+    }
+}  

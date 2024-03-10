@@ -17,15 +17,15 @@
                             <path
                                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                         </svg></a></li>
-                <li><a href="#">Home</a></li>
+                <li><a href="../1st Page/index.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Login</a></li>
             </ul>
 
             <ul class="topBar">
-                <li><a href="#">Portfolio-Generator</a></li>
-                <li class="hideOnMobile"><a href="#">Home</a></li>
+                <li><a href="../1st Page/index.html">Portfolio-Generator</a></li>
+                <li class="hideOnMobile"><a href="../1st Page/index.html">Home</a></li>
                 <li class="hideOnMobile"><a href="#">About</a></li>
                 <li class="hideOnMobile"><a href="#">Contact</a></li>
                 <li class="hideOnMobile"><a href="#">Login</a></li>
@@ -37,17 +37,34 @@
 
         </div>
         <div class="imgSection">
-            <img class="portfolioImage"src="C:\Users\aamir\OneDrive\Desktop\Aamir\Portfolio\Portfolio1.jpeg">
+            <img class="portfolioImage"src="../images/portfolioImages/Portfolio1.jpeg">
         </div>
         <div class="allbtn">
-            <button class="buttons"> Prev </button>
-            <button class="buttons"> 1 </button>
-            <button class="buttons"> 2 </button>
-            <button class="buttons"> 3 </button>
-            <button class="buttons"> Next </button>
+            <button  class="buttons"> Prev </button>
+            <button onclick="changeImage(1)" class="buttons"> 1 </button>
+            <button onclick="changeImage(2)" class="buttons"> 2 </button>
+            <button onclick="changeImage(3)" class="buttons"> 3 </button>
+            <button  class="buttons"> Next </button>
         </div>
     </div>
     <script>
+        function changeImage(val) {
+            var image = document.getElementsByClassName('portfolioImage')[0];
+            switch(val){
+                case 1:
+                    image.src = "../images/portfolioImages/Portfolio1.jpeg";
+                    break;
+                case 2:
+                    image.src = "../images/portfolioImages/Portfolio2.jpeg";
+                    break;
+                case 3:
+                    image.src = "../images/portfolioImages/Portfolio3.jpeg";
+                    break;
+                default:
+                    console.log('Error ocuured while displaying portfolio Image');
+                    break;
+            }
+        }
         function showSideBar() {
             const x = document.querySelector('.sideBar');
             x.style.display = 'flex';

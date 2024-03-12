@@ -157,4 +157,60 @@ a {
     .buttons {
         padding: 10px 16px;
     }
-}  
+}
+/* Third Page Start Here */
+/* mainSection,mainContent,heading,slider,slider-img,textContent,generate,btn */
+/* ABOVE CLASSES ARE USED IN FIRST PAGE */
+/* imgSection,portfolioImage,allbtn,buttons */
+/* ABOVE CLASSES ARE USED IN SECOND PAGE */  
+
+.template {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin:3% auto ;
+    
+    width: 50%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border: 2px solid black;
+}
+.template p,h3 {
+    margin: 2%;
+}
+.left {
+    padding: 10%;
+    background-color: white;
+}
+.right {
+    
+    padding: 10%;
+    background-color: lightblue;
+}
+.profileImg {
+    margin:10%;
+    width: 70%;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.name {
+    margin:5% 1%;
+    font-size: 150%;
+}
+.head {
+    padding:2%;
+    background-color: white;
+}
+.download {
+    margin:3%;
+    text-align: center;
+}
+.downloadbtn {
+    border-radius: 10px;
+    padding:10px;
+    font-size: 1.5rem;
+    background-color: white;
+}
+.downloadbtn:hover {
+    background-color: black;
+    color:white;
+    cursor:pointer;
+}

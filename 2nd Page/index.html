@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio-Generator</title>
-    <link rel="stylesheet" href="C:\Users\aamir\OneDrive\Desktop\Aamir\Portfolio-Generator\1st Page\style.css">
+    <link rel="stylesheet" href="..\1st Page\style.css">
 </head>
 
 <body>
@@ -59,9 +59,13 @@
                     break;
                 case 3:
                     image.src = "../images/portfolioImages/Portfolio3.jpeg";
+                    var link = document.createElement('a');
+                    link.href = '../templates/index.html';
+                    link.appendChild(image);
+                    document.getElementsByClassName('imgSection')[0].appendChild(link);
                     break;
                 default:
-                    console.log('Error ocuured while displaying portfolio Image');
+                    console.log('Error ocurred while displaying portfolio Image');
                     break;
             }
         }

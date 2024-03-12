@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Generator</title>
+    <link rel="stylesheet" href="../1st Page/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <ul class="sideBar">
+                <li onclick="hideSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24"
+                            viewBox="0 -960 960 960" width="24">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+
+            <ul class="topBar">
+                <li><a href="#">Portfolio-Generator</a></li>
+                <li class="hideOnMobile"><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="#">About</a></li>
+                <li class="hideOnMobile"><a href="#">Contact</a></li>
+                <li class="hideOnMobile"><a href="#">Login</a></li>
+                <li class="menu-button" onclick=showSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="24" viewBox="0 -960 960 960" width="24">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
+
+        </div>
+        <div id="capture" class="template" contenteditable="true">
+            <div class="left">
+                <img class="profileImg" src="../images/profile/pfp1.webp">
+                <div class="contact">
+                    <h2>Contact</h2>
+                    <p>9342039492</p>
+                    <p>sample@email.com</p>
+                    <p> Address</p>
+                </div>
+                <div class="career">
+                    <h2>Career Objective</h2>
+                    <p>"Highly motivated and results-oriented professional with a strong background
+                         in project management seeking a challenging role in a dynamic organization.
+                          Committed to leveraging my skills in leadership, strategic planning, and 
+                          communication to drive impactful initiatives and contribute to the company's
+                           growth objectives."
+                    </p>
+                </div>
+                <div class="language">
+                    <h2>Language</h2>
+                    <p>Language 1</p>
+                    <p>Language 2</p>
+                    <p>Language 3</p>
+                </div>
+                <div class="skill">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>Skill 1</li>
+                        <li>Skill 2</li>
+                        <li>Skill 3</li>
+                    </ul>
+
+
+                </div>
+                <div class="interest">
+                    <h2>Interests</h2>
+                    <p>Interest 1</p>
+                    <p>Interest 2</p>
+                    <p>Interest 3</p>
+                </div>
+
+
+            </div>
+            <div class="right">
+                <div class="name">
+                    <h1>Surname Name</h1>
+                    <h3>Your Role</h3>
+                </div>
+                <div class="education">
+                    <div class="head">
+                        <h2>Education</h2>
+                    </div>
+                    <h3>School</h3>
+                    <p>Name of Your School</p>
+                    <h3>College</h3>
+                    <p>Name of Your College</p>
+                    <h3>University</h3>
+                    <p>Name of Your University</p>
+                </div>
+                <div class="experience">
+                    <div class="head">
+                        <h2>Experience</h2>
+                    </div>
+                    <h3>Your Works 1</h3>
+                    <p>asdf ;lkj asdf ;lkj asdf ;lkj asdf ;lk;j asdf ;lkjk asdf ;lkj asdf ;lkj asdf ;lkj</p>
+                    <h3>Your Works 2</h3>
+                    <p>asdf ;lkj asdf ;lkj asdf ;lkj asdf ;lk;j asdf ;lkjk asdf ;lkj asdf ;lkj asdf ;lkj</p>
+                    <h3>Your Works 3</h3>
+                    <p>asdf ;lkj asdf ;lkj asdf ;lkj asdf ;lk;j asdf ;lkjk asdf ;lkj asdf ;lkj asdf ;lkj</p>
+
+                </div>
+                <div class="certificate">
+                    <div class="head">
+                        <h2>Certificate</h2>
+                    </div>
+                    <h4>Web Developmetent Bootcamp</h4>
+                    <h4>DSA Bootcamp</h4>
+                    <h4>Web Design Course</h4>
+                </div>
+            </div>
+
+        </div>
+        <div class="download "><button id="captureBtn" class="downloadbtn">DOWNLOAD</button></div>
+    </div>
+    <script>
+        document.getElementById('captureBtn').addEventListener('click', function() {
+    // Set scroll position to top
+    window.scrollTo(0, 0);
+
+    // Get the width and height of the content
+    var captureElement = document.getElementById('capture');
+    var width = captureElement.scrollWidth;
+    var height = captureElement.scrollHeight;
+
+    // Capture the entire page
+    html2canvas(captureElement, {
+        width: width,
+        height: height,
+        scrollX: 0,
+        scrollY: 0
+    }).then(function(capturedCanvas) {
+        // Convert canvas to data URL
+        var imgData = capturedCanvas.toDataURL('image/png');
+
+        // Create a link element and trigger download
+        var link = document.createElement('a');
+        link.href = imgData;
+        link.download = 'captured_image.png';
+        link.click();
+    });
+});
+
+        function showSideBar() {
+            const x = document.querySelector('.sideBar');
+            x.style.display = 'flex';
+        }
+        function hideSideBar() {
+            const x = document.querySelector('.sideBar');
+            x.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

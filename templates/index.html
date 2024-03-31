@@ -39,7 +39,9 @@
         </div>
         <div id="capture" class="template" contenteditable="true">
             <div class="left">
-                <img class="profileImg" src="../images/profile/pfp1.webp">
+                <img id='profileImg' class="profileImg" src="../images/profile/pfp1.webp" onclick="selectImage()">
+                <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="displaySelectedImage(event)">
+
                 <div class="contact">
                     <h2>Contact</h2>
                     <p>9342039492</p>
@@ -122,6 +124,21 @@
         <div class="download "><button id="captureBtn" class="downloadbtn">DOWNLOAD</button></div>
     </div>
     <script>
+         function selectImage() {
+            document.getElementById('fileInput').click();
+        }
+        function displaySelectedImage(event) {
+            const selectedFile = event.target.files[0]; // This will get the latest image select by user
+            if (selectedFile) {
+                const reader = new FileReader();
+                reader.onload = function(event) { // it works once the user has selected a image
+                    const imageUrl = event.target.result;
+                    document.getElementById('profileImg').src = imageUrl;
+                };
+                reader.readAsDataURL(selectedFile);
+            }
+        }
+
         document.getElementById('captureBtn').addEventListener('click', function() {
     // Set scroll position to top
     window.scrollTo(0, 0);

@@ -188,8 +188,10 @@ a {
 .profileImg {
     margin:10%;
     width: 70%;
-    border: 2px solid black;
-    border-radius: 50%;
+    border-radius: 40%;
+}
+.profileImg:hover{
+    cursor: pointer;
 }
 .name {
     margin:5% 1%;
@@ -214,3 +216,11 @@ a {
     color:white;
     cursor:pointer;
 }
+.skill li {
+    margin-left: 7%;
+}
+@media(max-width:800px) {
+    .template h2,h3,h4,p {
+        font-size: 14px;
+    }
+}    

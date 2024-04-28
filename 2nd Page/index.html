@@ -37,7 +37,7 @@
 
         </div>
         <div class="Selection"><h1>Select Template </h1></div>
-        
+        <div class="Recommendation" id="Recommendation"><h2>Recommended For professionals</h2></div>
         <div class="imgSection">
             <a href="../templates/index.html">
                 <img class="portfolioImage"src="../images/portfolioImages/Portfolio1.jpg" alt="template1">
@@ -61,6 +61,7 @@
                     link.href = '../templates/index.html';
                     link.appendChild(image);
                     document.getElementsByClassName('imgSection')[0].appendChild(link);
+                    document.getElementById("Recommendation").innerHTML = "<h2>Recommended For professionals </h2>";
                     break;
                 case 2:
                     image.src = "../images/portfolioImages/Portfolio2.png";
@@ -68,6 +69,7 @@
                     link.href = '../templates/index2.html';
                     link.appendChild(image);
                     document.getElementsByClassName('imgSection')[0].appendChild(link);
+                    document.getElementById("Recommendation").innerHTML = "<h2>Recommended For Students</h2>";
                     break;
                     /*
                 case 3:

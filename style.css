@@ -222,6 +222,10 @@ a {
 .skill li {
     margin-left: 7%;
 }
+.Recommendation{
+    text-align: center;
+    color: red;
+}
 @media(max-width:800px) {
     .template h2,h3,h4,p {
         font-size: 14px;

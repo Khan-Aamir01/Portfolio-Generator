@@ -36,15 +36,19 @@
             </ul>
 
         </div>
+        <div class="Selection"><h1>Select Template </h1></div>
+        
         <div class="imgSection">
-            <img class="portfolioImage"src="../images/portfolioImages/Portfolio1.jpeg">
+            <a href="../templates/index.html">
+                <img class="portfolioImage"src="../images/portfolioImages/Portfolio1.jpg" alt="template1">
+            </a>
         </div>
         <div class="allbtn">
-            <button  class="buttons"> Prev </button>
+            <!--<button  class="buttons"> Prev </button>-->
             <button onclick="changeImage(1)" class="buttons"> 1 </button>
             <button onclick="changeImage(2)" class="buttons"> 2 </button>
-            <button onclick="changeImage(3)" class="buttons"> 3 </button>
-            <button  class="buttons"> Next </button>
+          <!--  <button onclick="changeImage(3)" class="buttons"> 3 </button> -->
+          <!--  <button  class="buttons"> Next </button> -->
         </div>
     </div>
     <script>
@@ -52,11 +56,20 @@
             var image = document.getElementsByClassName('portfolioImage')[0];
             switch(val){
                 case 1:
-                    image.src = "../images/portfolioImages/Portfolio1.jpeg";
+                image.src = "../images/portfolioImages/Portfolio1.jpg";
+                    var link = document.createElement('a');
+                    link.href = '../templates/index.html';
+                    link.appendChild(image);
+                    document.getElementsByClassName('imgSection')[0].appendChild(link);
                     break;
                 case 2:
-                    image.src = "../images/portfolioImages/Portfolio2.jpeg";
+                    image.src = "../images/portfolioImages/Portfolio2.png";
+                    var link = document.createElement('a');
+                    link.href = '../templates/index2.html';
+                    link.appendChild(image);
+                    document.getElementsByClassName('imgSection')[0].appendChild(link);
                     break;
+                    /*
                 case 3:
                     image.src = "../images/portfolioImages/Portfolio3.jpeg";
                     var link = document.createElement('a');
@@ -64,6 +77,7 @@
                     link.appendChild(image);
                     document.getElementsByClassName('imgSection')[0].appendChild(link);
                     break;
+                    */
                 default:
                     console.log('Error ocurred while displaying portfolio Image');
                     break;
